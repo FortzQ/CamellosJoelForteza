@@ -1,0 +1,22 @@
+jun 07, 2025 5:14:55 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Servidor iniciado en el puerto 8888
+jun 07, 2025 5:15:23 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: manolo72
+jun 07, 2025 5:15:23 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: pepecostras
+jun 07, 2025 5:15:23 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre manolo72 vs pepecostras
+jun 07, 2025 5:15:40 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: manolo72
+jun 07, 2025 5:15:40 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para manolo72
+jun 07, 2025 5:18:44 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: musi
+jun 07, 2025 5:18:44 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: busi
+jun 07, 2025 5:18:44 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre musi vs busi
+jun 07, 2025 5:18:59 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: musi
+jun 07, 2025 5:18:59 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para musi

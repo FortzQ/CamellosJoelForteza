@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Cliente",
+      "request": "launch",
+      "mainClass": "org.etg.dam.camellos.cliente.Cliente",
+      "projectName": "camellos",
+      "vmArgs": "--enable-native-access=javafx.graphics --module-path \"C:/Program Files/javafx-sdk-24.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+
+    },
+    {
+      "type": "java",
+      "name": "Servidor",
+      "request": "launch",
+      "mainClass": "org.etg.dam.camellos.servidor.Servidor",
+      "projectName": "camellos"
+    }
+  ]
+}
