@@ -1,0 +1,30 @@
+
+@startuml DiagramaDespliegueCamellos
+
+skinparam backgroundColor #fdf6e3
+skinparam componentStyle uml2
+skinparam node {
+    BackgroundColor #fdf6e3
+    BorderColor black
+}
+
+node "Servidor " {
+    component Servidor <<java>>
+    component HistoriaPartidas <<txt>>
+}
+
+node "Cliente " {
+    component Cliente <<java>>
+
+}
+
+
+node "ServicioImpresión" {
+    component MarkdowntoPDF <<docker>>
+}
+
+Cliente --> Servidor : TCP (puerto 8888)
+Servidor --> MarkdowntoPDF: genera certificados PDF
+Servidor --> HistoriaPartidas: guarda partidas en fichero
+
+@enduml

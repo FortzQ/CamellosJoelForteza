@@ -76,3 +76,25 @@ jun 08, 2025 1:41:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor lo
 INFO: Fin de la carrera. Ganador/a/e:  Nuria
 jun 08, 2025 1:41:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
 INFO: Fin de la carrera. Ganador/a/e:  Nuria
+jun 08, 2025 5:24:28 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Servidor iniciado en el puerto8888
+jun 08, 2025 5:25:33 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: pipa
+jun 08, 2025 5:25:33 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: pipo
+jun 08, 2025 5:25:33 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Iniciando carrera entre pipa vs pipo
+jun 08, 2025 5:25:37 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: paco
+jun 08, 2025 5:25:37 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: paca
+jun 08, 2025 5:25:37 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Iniciando carrera entre paco vs paca
+jun 08, 2025 5:25:51 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  pipo
+jun 08, 2025 5:25:51 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  pipo
+jun 08, 2025 5:25:56 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  paco
+jun 08, 2025 5:25:56 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  paco

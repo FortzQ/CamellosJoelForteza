@@ -35,3 +35,5 @@ Partida 34 | mark vs byron | 2025-06-07 | Ganador: byron
 Partida 35 | uno vs doce | 2025-06-08 | Ganador: uno
 Partida 36 | tres vs cuatro | 2025-06-08 | Ganador: tres
 Partida 37 | Nuria vs Laura | 2025-06-08 | Ganador: Nuria
+Partida 38 | pipa vs pipo | 2025-06-08 | Ganador: pipo
+Partida 39 | paco vs paca | 2025-06-08 | Ganador: paco
