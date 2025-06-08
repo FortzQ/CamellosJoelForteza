@@ -24,20 +24,20 @@ public class Cliente extends Application {
 
     public static void iniciarCarrera(String nombreJugador) {
         try {
-            Socket socket = new Socket("localhost", Constantes.NUMERO_PUERTO);
+            Socket socket = new Socket(Constantes.LOCALHOST, Constantes.NUMERO_PUERTO);
             jugador = new Jugador(nombreJugador, socket);
 
-            // Enviar el nombre al servidor
+            // envia el nombre al servidor
             jugador.getSocket().getOutputStream().write((nombreJugador + "\n").getBytes());
 
             vista = new VistaJuegoFX(nombreJugador);
             vista.start(new Stage());
 
             hilo = new HiloCliente(jugador, vista);
-            new Thread(hilo).start();
+            new Thread(hilo).start(); //se crea el hilo para cada cliente
 
         } catch (IOException e) {
-            System.err.println(" Error al conectar con el servidor: " + e.getMessage());
+            System.err.println(Constantes.MSG_ERROR_CONECTAR_SERVIDOR+ e.getMessage());
         }
     }
 

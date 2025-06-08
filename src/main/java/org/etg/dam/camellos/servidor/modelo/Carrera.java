@@ -23,6 +23,7 @@ public class Carrera {
         return contadorJugadores == Constantes.MAX_JUGADORES;
     }
 
+    
     public boolean avanzar(Jugador jugador) {
     if (ganador != null) return false;
 

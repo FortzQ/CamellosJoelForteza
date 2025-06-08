@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import java.awt.Desktop;
 import java.io.File;
 
+import org.etg.dam.camellos.cliente.util.Constantes;
+
 
 public class VistaJuegoFX extends Application {
 
@@ -106,18 +108,18 @@ public class VistaJuegoFX extends Application {
 
     public void mostrarGanador(boolean esGanador) {
     if (esGanador) {
-        resultado.setText("¡¡OLE!! ¡HAS GANADO!");
+        resultado.setText(Constantes.MSG_ENHORABUENA_CARRERA);
         resultado.setStyle("-fx-text-fill: #00cc66; -fx-font-weight: bold;");
 
         // Crear botón para abrir el PDF
-        Button abrirCertificado = new Button("📄 Abrir Certificado PDF");
+        Button abrirCertificado = new Button(Constantes.MSG_ABRIR_CERTIFICADO);
         abrirCertificado.setOnAction(_ -> {
             try {
-                File pdf = new File("certificados/ganador_" + nombreJugador + ".pdf");
+                File pdf = new File(Constantes.RAIZ_NOMBRE_CERTIFICADO_PDF + nombreJugador + ".pdf");
                 if (pdf.exists()) {
                     Desktop.getDesktop().open(pdf);
                 } else {
-                    System.err.println("❌ No se encontró el PDF");
+                    System.err.println(Constantes.ERROR_NO_SE_ENCUENTRA_PDF);
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -129,7 +131,7 @@ public class VistaJuegoFX extends Application {
         contenedor.getChildren().add(abrirCertificado);
 
     } else {
-        resultado.setText("Ouch... ¡Has perdido!");
+        resultado.setText(Constantes.MSG_DERROTA_JUGADOR);
         resultado.setStyle("-fx-text-fill: #cc3333; -fx-font-weight: bold;");
     }
 }

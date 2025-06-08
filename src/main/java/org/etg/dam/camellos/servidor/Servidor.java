@@ -14,15 +14,17 @@ import java.net.Socket;
 public class Servidor {
 
     public static void main(String[] args) {
+        
         try (ServerSocket servidor = new ServerSocket(Constantes.NUMERO_PUERTO)) {
-            System.out.println("Servidor iniciado en el puerto " + Constantes.NUMERO_PUERTO);
-            LoggerServidor.logInfo(" Servidor iniciado en el puerto " + Constantes.NUMERO_PUERTO);
-
+            System.out.println(Constantes.MSG_SERVIDOR_INICIADO_PUERTO + Constantes.NUMERO_PUERTO);
+            LoggerServidor.logInfo(Constantes.MSG_SERVIDOR_INICIADO_PUERTO + Constantes.NUMERO_PUERTO);
+            
+            //espera a que los se conecten los dos jugadores
             while (true) {
                 Socket jugador1 = servidor.accept();
                 Socket jugador2 = servidor.accept();
 
-                new Thread(() -> ejecutarCarrera(jugador1, jugador2)).start();
+                new Thread(() -> ejecutarCarrera(jugador1, jugador2)).start(); // se crean los hilos para cada carrera
             }
         } catch (IOException e) {
             String msg = Constantes.MSG_ERROR_SERVIDOR + e.getMessage();
@@ -42,8 +44,8 @@ public class Servidor {
             String nombre1 = in1.readLine();
             String nombre2 = in2.readLine();
 
-            LoggerServidor.logInfo(" Jugador conectado: " + nombre1);
-            LoggerServidor.logInfo(" Jugador conectado: " + nombre2);
+            LoggerServidor.logInfo(Constantes.MSG_JUGADOR_CONECTADO + nombre1);
+            LoggerServidor.logInfo(Constantes.MSG_JUGADOR_CONECTADO + nombre2);
 
             Jugador j1 = new Jugador(nombre1, s1);
             Jugador j2 = new Jugador(nombre2, s2);
@@ -52,18 +54,19 @@ public class Servidor {
             carrera.agregarJugador(j1);
             carrera.agregarJugador(j2);
 
-            LoggerServidor.logInfo(" Iniciando carrera entre " + nombre1 + " vs " + nombre2);
+            LoggerServidor.logInfo(Constantes.MSG_INICIANDO_CARRERA_ENTRE + nombre1 + " vs " + nombre2);
 
             out1.println(Constantes.MSG_ESPERANDO_JUGADOR);
             out2.println(Constantes.MSG_ESPERANDO_JUGADOR);
 
-            Thread.sleep(1000);
+            Thread.sleep(Constantes.TIEMPO_ESPERA_COMIENZO_CARRERA);
 
             out1.println(Constantes.MSG_INICIO_CARRERA);
             out2.println(Constantes.MSG_INICIO_CARRERA);
 
             Jugador ganador = null;
 
+            // bucle de la carrera hasta que haya un ganador
             while (true) {
                 for (Jugador j : carrera.getJugadores()) {
                     if (ganador == null) {
@@ -75,14 +78,14 @@ public class Servidor {
                     }
                 }
 
-                // Enviar actualizaciones
+                // Enviar actualizaciones a los jugadores
                 for (Jugador j : carrera.getJugadores()) {
                     PrintWriter out = new PrintWriter(j.getSocket().getOutputStream(), true);
                     out.println(Constantes.POSICIONES);
                     for (Jugador otro : carrera.getJugadores()) {
                         out.println(otro.getNombre() + ": " + otro.getPosicion());
                     }
-                    out.println("---");
+                    out.println("---"); //delimitador
                 }
 
                 if (ganador != null) break;
@@ -90,15 +93,16 @@ public class Servidor {
                 Thread.sleep(Constantes.TIEMPO_AVANCE_CAMELLOS);
             }
 
-            LoggerServidor.logInfo(" Carrera finalizada. Ganador: " + ganador.getNombre());
+            LoggerServidor.logInfo(Constantes.MSG_FIN_CARRERA_DETERMINA_GANADOR + ganador.getNombre());
 
             RegistroPartidas.registrar(carrera.getJugadores(), ganador);
 
+            //informa a los jugadores del resultado de la carrera
             for (Jugador j : carrera.getJugadores()) {
                 PrintWriter out = new PrintWriter(j.getSocket().getOutputStream(), true);
                 if (j.getNombre().equals(ganador.getNombre())) {
                     out.println(Constantes.MSG_GANADOR);
-                    LoggerServidor.logInfo(" Certificado generado para " + j.getNombre());
+                    LoggerServidor.logInfo(Constantes.MSG_FIN_CARRERA_DETERMINA_GANADOR + j.getNombre());
 
                     GeneradorCertificado.generar(j.getNombre());
                     GeneradorCertificado.generarPDFconBat(j.getNombre());
@@ -109,7 +113,7 @@ public class Servidor {
             }
 
         } catch (Exception e) {
-            String msg = "❌ Error en carrera: " + e.getMessage();
+            String msg = Constantes.MSG_ERROR_CARRERA+ e.getMessage();
             System.err.println(msg);
             LoggerServidor.logError(msg);
         }

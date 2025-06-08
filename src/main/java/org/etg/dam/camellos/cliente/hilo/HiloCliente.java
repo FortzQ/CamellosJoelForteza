@@ -18,9 +18,10 @@ public class HiloCliente implements Runnable {
         this.jugador = jugador;
         this.vista = vista;
         try {
+            //lectura para recibir los datos del servidor
             this.in = new BufferedReader(new InputStreamReader(jugador.getSocket().getInputStream()));
         } catch (Exception e) {
-            System.err.println("❌ Error al iniciar lectura del socket: " + e.getMessage());
+            System.err.println(Constantes.ERROR_LECTURA_SOCKET+ e.getMessage());
         }
     }
 
@@ -28,11 +29,12 @@ public class HiloCliente implements Runnable {
     public void run() {
         try {
             String linea;
+            // lee los mensjes del servidor
             while ((linea = in.readLine()) != null) {
                 procesarMensaje(linea.trim());
             }
         } catch (Exception e) {
-            System.err.println("❌ Error en hilo cliente: " + e.getMessage());
+            System.err.println(Constantes.ERROR_CLASE_HILO_CLIENTE + e.getMessage());
         }
     }
 
@@ -65,7 +67,7 @@ public class HiloCliente implements Runnable {
                 }
             }
         } catch (Exception e) {
-            System.err.println("❌ Error al leer posiciones: " + e.getMessage());
+            System.err.println(Constantes.ERROR_LEER_POSICIONES + e.getMessage());
         }
     }
 }

@@ -20,3 +20,59 @@ jun 07, 2025 5:18:59 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor lo
 INFO:  Carrera finalizada. Ganador: musi
 jun 07, 2025 5:18:59 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
 INFO:  Certificado generado para musi
+jun 07, 2025 5:27:03 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Servidor iniciado en el puerto 8888
+jun 07, 2025 5:27:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: fin
+jun 07, 2025 5:27:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: jake
+jun 07, 2025 5:27:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre fin vs jake
+jun 07, 2025 5:27:38 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: fin
+jun 07, 2025 5:27:38 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para fin
+jun 07, 2025 5:28:42 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: mark
+jun 07, 2025 5:28:42 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: byron
+jun 07, 2025 5:28:42 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre mark vs byron
+jun 07, 2025 5:28:56 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: byron
+jun 07, 2025 5:28:56 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para byron
+jun 08, 2025 11:48:13 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Servidor iniciado en el puerto 8888
+jun 08, 2025 11:49:07 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: uno
+jun 08, 2025 11:49:07 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: doce
+jun 08, 2025 11:49:07 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre uno vs doce
+jun 08, 2025 11:49:15 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: tres
+jun 08, 2025 11:49:15 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Jugador conectado: cuatro
+jun 08, 2025 11:49:15 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Iniciando carrera entre tres vs cuatro
+jun 08, 2025 11:49:24 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: uno
+jun 08, 2025 11:49:24 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para uno
+jun 08, 2025 11:49:35 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Carrera finalizada. Ganador: tres
+jun 08, 2025 11:49:35 A. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO:  Certificado generado para tres
+jun 08, 2025 1:34:30 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Servidor iniciado en el puerto8888
+jun 08, 2025 1:41:06 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: Nuria
+jun 08, 2025 1:41:06 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Jugador conectado: Laura
+jun 08, 2025 1:41:06 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Iniciando carrera entre Nuria vs Laura
+jun 08, 2025 1:41:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  Nuria
+jun 08, 2025 1:41:22 P. M. org.etg.dam.camellos.servidor.util.LoggerServidor logInfo
+INFO: Fin de la carrera. Ganador/a/e:  Nuria

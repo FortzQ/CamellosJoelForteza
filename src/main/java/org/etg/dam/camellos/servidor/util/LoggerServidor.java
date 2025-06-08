@@ -3,35 +3,38 @@ package org.etg.dam.camellos.servidor.util;
 import java.io.File;
 import java.util.logging.*;
 
+import org.etg.dam.camellos.cliente.util.Constantes;
+
 public class LoggerServidor {
 
-    private static final String RUTA_LOGS = "logs";
-    private static final String ARCHIVO_LOG = "logs/servidor.log";
     private static Logger logger;
 
+    //se ejecuta al cargar la clase
     static {
         try {
-            new File(RUTA_LOGS).mkdirs();
+            new File(Constantes.RUTA_LOGS).mkdirs();
 
-            logger = Logger.getLogger("CamellosLogger");
-            FileHandler fh = new FileHandler(ARCHIVO_LOG, true);
+            logger = Logger.getLogger(Constantes.CAMELLOS_LOGGER);
+            FileHandler fh = new FileHandler(Constantes.ARCHIVO_LOG, true);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
             logger.setUseParentHandlers(false);
         } catch (Exception e) {
-            System.err.println(" Error al iniciar logger: " + e.getMessage());
+            System.err.println(Constantes.ERROR_LOGGER + e.getMessage());
         }
     }
 
-    // ✅ Métodos específicos que faltaban:
+    // Métodos específicos que faltaban:
     public static void logInfo(String msg) {
         logger.log(Level.INFO, msg);
     }
 
+
+    //registra errores y/o excepciones
     public static void logError(String msg) {
         logger.log(Level.SEVERE, msg);
     }
-
+    
     public static void logWarning(String msg) {
         logger.log(Level.WARNING, msg);
     }

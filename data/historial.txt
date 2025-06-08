@@ -32,3 +32,6 @@ Partida 31 | manolo72 vs pepecostras | 2025-06-07 | Ganador: manolo72
 Partida 32 | musi vs busi | 2025-06-07 | Ganador: musi
 Partida 33 | fin vs jake | 2025-06-07 | Ganador: fin
 Partida 34 | mark vs byron | 2025-06-07 | Ganador: byron
+Partida 35 | uno vs doce | 2025-06-08 | Ganador: uno
+Partida 36 | tres vs cuatro | 2025-06-08 | Ganador: tres
+Partida 37 | Nuria vs Laura | 2025-06-08 | Ganador: Nuria
